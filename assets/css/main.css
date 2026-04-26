@@ -126,6 +126,54 @@ a:hover {
   padding: var(--space-6) 0;
 }
 
+.contentBlock {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+.parallaxSection {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: clip;
+  margin: var(--space-6) 0;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.parallaxBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  filter: saturate(0.95) contrast(0.98);
+}
+
+.parallaxShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 247, 242, 0.72) 0%,
+    rgba(250, 247, 242, 0.86) 45%,
+    rgba(250, 247, 242, 0.92) 100%
+  );
+}
+
+.parallaxFg {
+  position: relative;
+  padding: var(--space-6);
+}
+
+.parallaxColumns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
 h1 {
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.12;
@@ -219,5 +267,15 @@ ul {
 
   .footerGrid {
     grid-template-columns: 1fr;
+  }
+
+  .parallaxFg {
+    padding: var(--space-5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallaxBg {
+    will-change: auto;
   }
 }
