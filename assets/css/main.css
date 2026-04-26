@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Newsreader:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 :root {
-  --bg: #faf7f2;
-  --text: #1f1f1f;
-  --muted: #4a4a4a;
+  --bg: #fafaf7;
+  --text: #1c1c1e;
+  --muted: #5a5a60;
   --surface: #ffffff;
-  --border: rgba(31, 31, 31, 0.12);
+  --border: rgba(0, 0, 0, 0.08);
 
-  --accent: #c46a2b;
-  --accent2: #2f5d50;
-  --dark: #151515;
+  --accent: #1a7a43;
+  --accent2: #2ecc71;
+  --dark: #1c1c1e;
 
-  --radius: 14px;
-  --container: 980px;
+  --radius: 16px;
+  --container: 1100px;
 
   --space-1: 6px;
   --space-2: 10px;
@@ -33,9 +35,14 @@ body {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(46, 204, 113, 0.08) 100%
+  );
   color: var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.65;
 }
 
@@ -81,7 +88,7 @@ a:hover {
 }
 
 .brandLogo {
-  height: 34px;
+  height: 51px;
   width: auto;
   display: block;
 }
@@ -104,6 +111,7 @@ a:hover {
   text-decoration: none;
   font-weight: 650;
   font-size: 14px;
+  transition: background-color 160ms ease, border-color 160ms ease;
 }
 
 .nav a {
@@ -111,8 +119,51 @@ a:hover {
   border-color: var(--border);
 }
 
+.nav a.navCta {
+  position: relative;
+  font-weight: 700;
+  background: rgba(26, 122, 67, 0.10);
+  border-color: rgba(26, 122, 67, 0.22);
+}
+
+.nav a.navCta::after {
+  content: attr(data-hover);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%) translateY(-4px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 30;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  white-space: nowrap;
+  font-weight: 650;
+  font-size: 12px;
+  color: var(--muted);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.nav a.navCta:hover::after,
+.nav a.navCta:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
 .nav a:hover {
-  border-color: rgba(31, 31, 31, 0.25);
+  background: rgba(232, 248, 240, 1);
+  border-color: rgba(46, 204, 113, 0.35);
+}
+
+.nav a:focus-visible {
+  background: rgba(232, 248, 240, 1);
+  border-color: rgba(46, 204, 113, 0.45);
+  outline: none;
 }
 
 .nav span {
@@ -131,6 +182,80 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: var(--space-5);
+}
+
+.depthSection {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: var(--space-7) 0;
+}
+
+.depthContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+}
+
+.depthSection .container.depthContent {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.depthSection:nth-of-type(odd) .depthContent {
+  justify-content: flex-end;
+}
+
+.depthSection:nth-of-type(even) .depthContent {
+  justify-content: flex-start;
+}
+
+.depthText {
+  width: min(520px, 100%);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 60px rgba(31, 31, 31, 0.14);
+}
+
+.depthPhoto {
+  position: absolute;
+  z-index: 1;
+  width: min(64vw, 920px);
+  height: 74vh;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  border-radius: var(--radius);
+  overflow: hidden;
+  opacity: 0.9;
+  box-shadow: 0 24px 80px rgba(31, 31, 31, 0.18);
+}
+
+.depthPhotoLeft {
+  left: 50px;
+}
+
+.depthPhotoRight {
+  right: 50px;
+}
+
+.depthPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.depthSection + .depthSection {
+  border-top: 1px solid var(--border);
 }
 
 .parallaxSection {
@@ -177,14 +302,32 @@ a:hover {
 h1 {
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.12;
-  letter-spacing: -0.6px;
+  letter-spacing: -1px;
   margin: 0 0 var(--space-4);
+  font-weight: 800;
+}
+
+.depthTitle {
+  flex: 1;
+  padding-top: calc(var(--space-5) + var(--space-6) + 39px);
+  padding-right: 50px;
+}
+
+.depthTitle h1 {
+  margin: 0;
 }
 
 h2 {
   font-size: 20px;
   line-height: 1.25;
   margin: var(--space-6) 0 var(--space-3);
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.accentEm {
+  color: var(--accent);
+  font-style: italic;
 }
 
 p {
@@ -227,14 +370,36 @@ ul {
   gap: 8px;
   padding: 10px 12px;
   border-radius: 999px;
-  background: rgba(196, 106, 43, 0.12);
-  border: 1px solid rgba(196, 106, 43, 0.35);
+  background: rgba(26, 122, 67, 0.10);
+  border: 1px solid rgba(26, 122, 67, 0.25);
   text-decoration: none;
   font-weight: 750;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.btnLinkStack {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 12px 14px;
+}
+
+.btnLinkStack .btnMain {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.btnLinkStack .btnSub {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.1;
+  color: var(--muted);
 }
 
 .btnLink:hover {
-  background: rgba(196, 106, 43, 0.18);
+  background: rgba(232, 248, 240, 1);
+  border-color: rgba(46, 204, 113, 0.35);
 }
 
 .siteFooter {
@@ -271,6 +436,31 @@ ul {
 
   .parallaxFg {
     padding: var(--space-5);
+  }
+
+  .depthSection {
+    min-height: auto;
+    display: block;
+    padding: var(--space-6) 0;
+  }
+
+  .depthPhoto {
+    position: relative;
+    width: calc(100% - 36px);
+    height: 38vh;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0 auto var(--space-5);
+    transform: none !important;
+  }
+
+  .depthContent {
+    display: block;
+  }
+
+  .depthText {
+    width: 100%;
   }
 }
 

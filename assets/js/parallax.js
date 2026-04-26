@@ -1,34 +1,39 @@
-(() => {
-  const isReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+document.addEventListener("DOMContentLoaded", () => {
+  const photos = document.querySelectorAll("[data-depth-photo]");
 
-  if (isReduced || isCoarse) return;
+  if (!photos.length) return;
 
-  const layers = Array.from(document.querySelectorAll('[data-parallax-layer]'));
-  if (!layers.length) return;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const mobile = window.matchMedia("(max-width: 840px)").matches;
 
-  let raf = 0;
+  if (reduced || mobile) return;
 
-  const update = () => {
-    raf = 0;
-    const vh = window.innerHeight || 1;
+  let ticking = false;
 
-    for (const el of layers) {
-      const rect = el.getBoundingClientRect();
-      const speedAttr = el.getAttribute('data-speed');
-      const speed = speedAttr ? Number(speedAttr) : 0.2;
-      const progress = (rect.top + rect.height * 0.5 - vh * 0.5) / vh;
-      const y = -progress * 80 * speed;
-      el.style.transform = `translate3d(0, ${y}px, 0)`;
+  function updateDepth() {
+    photos.forEach((photo) => {
+      const section = photo.closest("[data-depth-section]");
+      if (!section) return;
+
+      const rect = section.getBoundingClientRect();
+      const speed = parseFloat(photo.dataset.speed || "0.18");
+
+      const y = -rect.top * speed;
+
+      photo.style.transform = `translate3d(0, calc(-50% + ${y}px), 0)`;
+    });
+
+    ticking = false;
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateDepth);
+      ticking = true;
     }
-  };
+  }
 
-  const requestUpdate = () => {
-    if (raf) return;
-    raf = window.requestAnimationFrame(update);
-  };
-
-  update();
-  window.addEventListener('scroll', requestUpdate, { passive: true });
-  window.addEventListener('resize', requestUpdate);
-})();
+  window.addEventListener("scroll", requestTick, { passive: true });
+  window.addEventListener("resize", requestTick);
+  updateDepth();
+});
