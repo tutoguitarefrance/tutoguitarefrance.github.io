@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Guitares Loog Fender &amp; Gibson – Apprentissage simplifié | TutoGuitare.fr</title>
+  <meta name="description" content="Découvrez les guitares Loog Fender et Gibson, conçues pour les débutants. Revendeur officiel en France dès août 2026 (infos à confirmer). Conseils d’expert et réservation." />
+
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.tutoguitare.fr/guitares-loog/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Guitares Loog Fender &amp; Gibson – Apprentissage simplifié" />
+  <meta property="og:description" content="Des guitares 3 cordes conçues pour les débutants et les enfants. Objectif : revendeur officiel en France dès août 2026 (infos à confirmer)." />
+  <meta property="og:url" content="https://www.tutoguitare.fr/guitares-loog/" />
+  <meta property="og:site_name" content="TutoGuitare.fr" />
+  <!-- <meta property="og:image" content="https://www.tutoguitare.fr/wp-content/uploads/2026/xx/loog-banner.webp" /> -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guitares Loog Fender &amp; Gibson – Apprentissage simplifié" />
+  <meta name="twitter:description" content="Guitares 3 cordes Fender & Gibson : parfaites pour débuter. Réservation et conseils." />
+  <!-- <meta name="twitter:image" content="https://www.tutoguitare.fr/wp-content/uploads/2026/xx/loog-banner.webp" /> -->
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #555555;
+      --border: #e6e6e6;
+      --surface: #f7f7f7;
+
+      --accent: #1ea64a;
+      --accent-2: #7b2cff;
+      --accent-soft: rgba(30,166,74,.10);
+      --gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      --gradient-soft: linear-gradient(135deg, rgba(30,166,74,.16) 0%, rgba(123,44,255,.14) 100%);
+
+      --max: 1120px;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+
+      --font-title: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      --font-body: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ margin:0; padding:0; }
+    body{
+      font-family: var(--font-body);
+      line-height: 1.6;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 420px at 10% 0%, rgba(30,166,74,.10), transparent 60%),
+        radial-gradient(900px 380px at 90% 10%, rgba(123,44,255,.10), transparent 55%),
+        var(--bg);
+    }
+
+    a{ color: inherit; }
+    .container{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left: 16px;
+      top: 16px;
+      width:auto;
+      height:auto;
+      padding:10px 12px;
+      background: #fff;
+      border: 2px solid var(--accent);
+      border-radius: 10px;
+      z-index: 9999;
+    }
+
+    header.hero{
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(1200px 400px at 20% 0%, rgba(30,166,74,.18), transparent 55%),
+        radial-gradient(1100px 380px at 85% 10%, rgba(123,44,255,.16), transparent 55%),
+        linear-gradient(180deg, #fff, #fafafa);
+    }
+
+    .hero-inner{
+      padding: 56px 0 28px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .badge .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(30,166,74,.12);
+    }
+
+    h1{
+      font-family: var(--font-title);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.1;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 18px);
+      max-width: 72ch;
+    }
+
+    .hero-cta{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+      user-select: none;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn-primary{
+      background: var(--gradient);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(30,166,74,.14);
+    }
+    .btn-primary:hover{ box-shadow: 0 14px 30px rgba(123,44,255,.20); }
+
+    .btn-green{
+      background: var(--gradient);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(30,166,74,.14);
+    }
+    .btn-green:hover{ box-shadow: 0 14px 30px rgba(123,44,255,.20); }
+    .btn-ghost{
+      background: #fff;
+    }
+
+    .hero-banner{
+      border: 1px dashed #cfcfcf;
+      border-radius: var(--radius);
+      background:
+        radial-gradient(800px 240px at 10% 0%, rgba(30,166,74,.10), transparent 60%),
+        radial-gradient(700px 220px at 90% 10%, rgba(123,44,255,.10), transparent 55%),
+        #fff;
+      min-height: 160px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 18px;
+      color: #666;
+    }
+
+    .hero-banner img{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    main{ padding: 28px 0 60px; }
+
+    section{
+      padding: 26px 0;
+    }
+
+    .section-title{
+      font-family: var(--font-title);
+      font-size: 26px;
+      margin: 0 0 12px;
+      letter-spacing: -0.01em;
+    }
+    .lead{
+      margin: 0;
+      color: var(--muted);
+      max-width: 82ch;
+    }
+
+    .grid-2{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px){
+      .grid-2{ grid-template-columns: 1fr 1fr; }
+      .hero-inner{
+        grid-template-columns: 1.1fr .9fr;
+        align-items: center;
+      }
+    }
+
+    .brand-block{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .brand-name{
+      margin:0;
+      font-family: var(--font-title);
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+
+    .inline-logo{
+      height: clamp(24px, 2.4vw, 32px);
+      width: auto;
+      vertical-align: -5px;
+      margin: 0 8px 0 0;
+      display: inline-block;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      background:
+        linear-gradient(180deg, rgba(30,166,74,.04), rgba(123,44,255,.03)),
+        #fff;
+    }
+    .card h3{
+      margin: 0 0 8px;
+      font-family: var(--font-title);
+      font-size: 18px;
+    }
+    .meta{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .kv{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: #222;
+      font-size: 14px;
+    }
+    .kv li{ margin: 6px 0; }
+
+    .product-gallery{
+      margin-top: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, rgba(30,166,74,.03), rgba(123,44,255,.02)),
+        #fff;
+      overflow: hidden;
+    }
+
+    .product-gallery-main{
+      background: #fafafa;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px;
+      height: clamp(220px, 30vw, 320px);
+    }
+
+    .product-gallery-main img{
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .product-gallery-thumbs{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      padding: 10px;
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .product-gallery-thumbs img{
+      width: 100%;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fafafa;
+      display: block;
+      cursor: pointer;
+      transition: transform .08s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+
+    .product-gallery-thumbs img:active{ transform: translateY(1px); }
+    .product-gallery-thumbs img.is-active{
+      border-color: rgba(30,166,74,.40);
+      box-shadow: 0 0 0 3px rgba(123,44,255,.10);
+    }
+
+    .card-actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .btn-small{
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+
+    .why{
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff, #fbfbfb);
+      padding: 18px;
+    }
+
+    .faq{
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #fff;
+      overflow: hidden;
+    }
+    details{
+      border-top: 1px solid var(--border);
+      padding: 14px 16px;
+    }
+    details:first-child{ border-top: none; }
+    summary{
+      cursor: pointer;
+      font-weight: 800;
+      font-family: var(--font-title);
+      list-style: none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .faq p{
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .cta-final{
+      border-radius: var(--radius);
+      border: 1px solid rgba(30,166,74,.22);
+      background:
+        radial-gradient(900px 240px at 10% 0%, rgba(30,166,74,.14), transparent 60%),
+        radial-gradient(820px 220px at 90% 0%, rgba(123,44,255,.10), transparent 60%),
+        linear-gradient(180deg, #fff, #fff);
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(30,166,74,.06);
+    }
+
+    .footer-links{
+      margin-top: 10px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hr{
+      height:1px;
+      background: var(--border);
+      margin: 18px 0;
+    }
+
+    .note{
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .shop-placeholders{
+      margin-top: 14px;
+      border-radius: 14px;
+      border: 1px dashed #cfcfcf;
+      background: #fafafa;
+      padding: 14px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .sr-only{
+      position:absolute;
+      width:1px;height:1px;
+      padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0,0,0,0);
+      white-space:nowrap;border:0;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Guitares Loog Fender & Gibson – L’apprentissage de la guitare simplifié",
+    "url": "https://www.tutoguitare.fr/guitares-loog/",
+    "inLanguage": "fr-FR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "TutoGuitare.fr",
+      "url": "https://www.tutoguitare.fr/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quelle taille de guitare Loog choisir pour mon enfant ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En général, une guitare plus compacte est idéale pour les plus jeunes. Je peux te conseiller en fonction de l’âge, de la taille et du confort de jeu : contacte-moi et je t’oriente vers le modèle le plus adapté."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les guitares Loog sont-elles adaptées aux adultes ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, elles peuvent convenir aux adultes débutants qui veulent une approche simple et progressive (3 cordes) avant de passer à 6 cordes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Achat sur réservation",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En attendant l’ouverture de la boutique, l’achat se fera sur réservation. Tu peux me contacter pour réserver ou être prévenu des disponibilités."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <div class="badge" aria-label="Vitrine produits Loog">
+            <span class="dot" aria-hidden="true"></span>
+            <span>Guitares 3 cordes pour débutants • Fender &amp; Gibson</span>
+          </div>
+
+          <h1>Guitares Loog Fender &amp; Gibson – L’apprentissage de la guitare simplifié&nbsp;!</h1>
+          <p class="subtitle">
+            Des guitares 3 cordes conçues pour les enfants.
+            Bientôt disponibles chez TutoGuitare&nbsp;!
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-green" href="#pourquoi-loog">Découvrez pourquoi ces guitares révolutionnent l’apprentissage&nbsp;!</a>
+            <a class="btn btn-ghost" href="#modeles">Voir les modèles</a>
+          </div>
+
+        </div>
+
+        <div class="hero-banner">
+          <img src="../assets/images/loog/Banner-Loog-Guitar.png" alt="Bannière : guitares Loog by Fender et Loog by Gibson" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <div class="container">
+
+      <section id="intro" aria-labelledby="intro-title">
+        <h2 class="section-title" id="intro-title">Le concept Loog (3 cordes) : simple, motivant, efficace</h2>
+        <p class="lead">
+          Les guitares Loog sont conçues avec seulement <strong>3 cordes</strong> pour rendre l’apprentissage plus
+          <strong>intuitif</strong> et plus rapide. Elles sont parfaites pour les <strong>enfants</strong> qui veulent jouer des morceaux et progresser sans être bloqués dès le départ par le nombre de cordes.
+          Avec les éditions Fender et Gibson, on retrouve un design iconique et une vraie exigence de qualité.
+        </p>
+      </section>
+
+      <section id="modeles" aria-labelledby="modeles-title">
+        <h2 class="section-title" id="modeles-title">Modèles disponibles (sur réservation)</h2>
+
+        <div class="grid-2">
+          <div class="brand-block" id="fender" aria-labelledby="fender-title">
+            <div class="brand-head">
+              <div>
+                <h3 class="brand-name" id="fender-title"><img class="inline-logo" src="../assets/images/loog/LGPROEFSR-head.png" alt="Fender" loading="lazy" />Loog by Fender – Le son légendaire, adapté aux débutants</h3>
+                <p class="meta">Mots-clés&nbsp;: <strong>guitare Loog Fender</strong>, guitare 3 cordes débutant.</p>
+              </div>
+            </div>
+
+            <div class="cards">
+              <article class="card" aria-labelledby="fender-mini">
+                <h3 id="fender-mini">Loog Mini</h3>
+                <p class="meta">Guitare électrique 3 cordes au format enfant, inspirée du design Stratocaster, avec un son clair et direct (1 micro, 1 volume). Facile à prendre en main dès les premières séances.</p>
+                <ul class="kv">
+                  <li><strong>Cordes</strong> : 3</li>
+                  <li><strong>Accordage</strong> : G–B–E</li>
+                  <li><strong>Matériaux</strong> : corps en paulownia, manche + touche en érable, sillet en os</li>
+                  <li><strong>Électronique</strong> : 1 micro simple bobinage, 1 contrôle volume</li>
+                  <li><strong>Dimensions</strong> : 524 mm (20,6")</li>
+                  <li><strong>Inclus</strong> : cartes d’accords, médiators + stickers, livret, code d’accès à l’app Loog</li>
+                </ul>
+                <div class="product-gallery" aria-label="Photos du modèle LGPROEFSR">
+                  <div class="product-gallery-main">
+                    <img src="../assets/images/loog/LGPROEFSR.png" alt="Guitare électrique Loog Mini Fender x Loog Stratocaster Red" loading="lazy" />
+                  </div>
+                  <div class="product-gallery-thumbs" aria-label="Vues supplémentaires">
+                    <img src="../assets/images/loog/LGPROEFSR-head.png" alt="Détail tête guitare Loog Mini Fender x Loog Stratocaster Red" loading="lazy" />
+                    <img src="../assets/images/loog/LGPROEFSR-back.png" alt="Vue dos guitare Loog Mini Fender x Loog Stratocaster Red" loading="lazy" />
+                    <img src="../assets/images/loog/LGPROEFSR-back01.png" alt="Vue dos (détail) guitare Loog Mini Fender x Loog Stratocaster Red" loading="lazy" />
+                    <img src="../assets/images/loog/LGPROEFSR-pack.png" alt="Packaging guitare Loog Mini Fender x Loog Stratocaster Red" loading="lazy" />
+                  </div>
+                </div>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-small" href="#contact">Pré-commander</a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="brand-block" id="gibson" aria-labelledby="gibson-title">
+            <div class="brand-head">
+              <div>
+                <h3 class="brand-name" id="gibson-title"><img class="inline-logo" src="../assets/images/loog/LOOGGIBS.png" alt="Gibson" loading="lazy" />Loog by Gibson – Le style iconique pour les petits guitaristes</h3>
+                <p class="meta">Mots-clés&nbsp;: <strong>guitare Loog Gibson</strong>, guitare enfant facile.</p>
+              </div>
+            </div>
+
+            <div class="cards">
+              <article class="card" aria-labelledby="gibson-2">
+                <h3 id="gibson-2">Loog Gibson (modèle à confirmer)</h3>
+                <p class="meta">Guitare électrique 3 cordes au format enfant, style SG, conçue avec des spécifications sérieuses (19 frettes, sillet en os, micro Dogear) et un kit pédagogique Gibson x Loog pour apprendre en s’amusant.</p>
+                <ul class="kv">
+                  <li><strong>Cordes</strong> : 3</li>
+                  <li><strong>Accordage</strong> : G–B–E</li>
+                  <li><strong>Matériaux</strong> : peuplier, finition gloss polyurethane, forme SG, érable canadien (vissé), touche palissandre</li>
+                  <li><strong>Électronique</strong> : 1 micro simple bobinage, 1 contrôle volume</li>
+                  <li><strong>Dimensions</strong> : 523 mm (20,6")</li>
+                  <li><strong>Inclus</strong> : cartes-questionnaires, app de cours en vidéo, livre d’activités Gibson x Loog</li>
+                </ul>
+                <div class="product-gallery" aria-label="Photos du modèle LGPROGIB">
+                  <div class="product-gallery-main">
+                    <img src="../assets/images/loog/LGPROGIB-front01.png" alt="Guitare électrique Loog by Gibson (vue de face, détail 1)" loading="lazy" />
+                  </div>
+                  <div class="product-gallery-thumbs" aria-label="Vues supplémentaires">
+                    <img src="../assets/images/loog/LGPROGIB-front01.png" alt="Guitare électrique Loog by Gibson (vue de face, détail 1)" loading="lazy" />
+                    <img src="../assets/images/loog/LGPROGIB-front02.png" alt="Guitare électrique Loog by Gibson (vue de face, détail 2)" loading="lazy" />
+                    <img src="../assets/images/loog/LGPROGIB-back.png" alt="Guitare électrique Loog by Gibson (vue de dos)" loading="lazy" />
+                    <img src="../assets/images/loog/LGPROGIB-pack.png" alt="Kit et contenu inclus Loog by Gibson" loading="lazy" />
+                    <img src="../assets/images/loog/LOOGGIBS.png" alt="Visuel Loog by Gibson" loading="lazy" />
+                  </div>
+                </div>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-small" href="#contact">Pré-commander</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div id="boutique-a-venir" class="shop-placeholders" aria-label="Préparation boutique à venir">
+          <strong>Préparation boutique (à venir)</strong><br />
+          - Boutons “Acheter maintenant” : liens vers la boutique future<br />
+          - Section “Promotions élèves” (codes de réduction)
+        </div>
+      </section>
+
+      <section id="pourquoi-loog" aria-labelledby="why-title">
+        <h2 class="section-title" id="why-title">Pourquoi les guitares Loog sont-elles parfaites pour débuter ?</h2>
+        <div class="why">
+          <p>
+            Les guitares Loog ont été pensées pour offrir aux enfants une <strong>réussite immédiate</strong> : grâce au format
+            <strong>3 cordes</strong>, l’apprentissage devient plus simple, plus visuel et plus motivant, avec moins de douleur aux doigts.
+            Résultat : dès les premières séances, l’enfant peut jouer des accords, reconnaître des chansons et ressentir le plaisir de
+            « vraiment jouer », ce qui renforce naturellement l’envie de continuer.
+          </p>
+
+          <p>
+            Sur le plan pédagogique, Loog n’est pas un jouet : c’est un <strong>véritable instrument éducatif</strong> qui stimule l’écoute,
+            la coordination, la concentration et la confiance en soi. Et surtout, l’approche permet une <strong>transition progressive</strong>
+            vers une guitare 6 cordes lorsque l’enfant grandit.
+          </p>
+
+          <p>
+            Côté commercial, la grande force de Loog est l’<strong>identification</strong> : avec les collaborations officielles
+            <strong>Fender</strong> et <strong>Gibson</strong>, l’enfant ne voit plus une « petite guitare pour enfant », mais une mini guitare au look
+            iconique. En magasin, cet effet visuel crée un <strong>« waouh » immédiat</strong>, rassure les parents par la notoriété et la qualité
+            perçue, et favorise l’achat plaisir (ou cadeau).
+          </p>
+
+          <p>
+            En bref, Loog se positionne comme un produit <strong>à la fois éducatif et émotionnel</strong> : une première expérience musicale
+            positive, un objet « cool » que l’enfant a envie de montrer, et une porte d’entrée moderne vers la musique.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 class="section-title" id="faq-title">Questions fréquentes</h2>
+
+        <div class="faq">
+          <details>
+            <summary>Quelle taille de guitare Loog choisir pour mon enfant ?</summary>
+            <p>
+              Le bon choix dépend surtout de l’âge, de la taille et du confort de l’enfant. Écris-moi et je te conseille
+              un modèle adapté (et je te dirai aussi quoi vérifier : posture, portée des doigts, etc.).
+            </p>
+          </details>
+
+          <details>
+            <summary>Les guitares Loog sont-elles adaptées aux adultes ?</summary>
+            <p>
+              Oui. Elles peuvent être très pertinentes pour un adulte débutant qui veut une progression claire et motivante
+              avant de passer à une guitare 6 cordes.
+            </p>
+          </details>
+
+          <details>
+            <summary>Achat sur réservation</summary>
+            <p>
+              En attendant l’ouverture de la boutique, l’achat se fera sur réservation. Tu peux me contacter pour réserver
+              ou être prévenu dès que les modèles sont disponibles.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="cta-final">
+          <h2 class="section-title" id="contact-title">Prêt à commencer ?</h2>
+          <p class="lead">
+            Contactez-moi pour réserver votre guitare Loog ou obtenir un conseil personnalisé.
+          </p>
+
+          <div class="hero-cta" style="margin-top:14px;">
+            <a class="btn btn-green" href="mailto:contact@tutostudio.eu">Me contacter</a>
+            <a class="btn btn-ghost" href="#modeles">Revoir les modèles</a>
+          </div>
+
+          <div class="hr" role="presentation"></div>
+
+          <nav class="footer-links" aria-label="Liens utiles">
+            <a href="#" title="À remplacer par l’URL de tes cours débutants">Cours de guitare (débutants)</a>
+            <a href="#" title="À remplacer par ton URL de confidentialité">Politique de confidentialité</a>
+          </nav>
+
+          <p class="note">© 2026 Tutostudio</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      var galleries = document.querySelectorAll('.product-gallery');
+      galleries.forEach(function(gallery){
+        var mainImg = gallery.querySelector('.product-gallery-main img');
+        var thumbs = gallery.querySelectorAll('.product-gallery-thumbs img');
+        if (!mainImg || !thumbs.length) return;
+
+        function setActiveThumb(active){
+          thumbs.forEach(function(t){ t.classList.remove('is-active'); });
+          if (active) active.classList.add('is-active');
+        }
+
+        var initialActive = null;
+        thumbs.forEach(function(t){
+          if (t.src === mainImg.src) initialActive = t;
+        });
+        setActiveThumb(initialActive);
+
+        thumbs.forEach(function(thumb){
+          thumb.addEventListener('click', function(){
+            mainImg.src = thumb.src;
+            if (thumb.alt) mainImg.alt = thumb.alt;
+            setActiveThumb(thumb);
+            gallery.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
