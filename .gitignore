@@ -1,1 +1,5 @@
 _archive/
+
+# Local tooling
+.windsurf/
+*.code-workspace
