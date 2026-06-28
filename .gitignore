@@ -3,3 +3,6 @@ _archive/
 # Local tooling
 .windsurf/
 *.code-workspace
+
+# Local Netlify folder
+.netlify
