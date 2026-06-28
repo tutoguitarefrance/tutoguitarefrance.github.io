@@ -93,6 +93,34 @@ a:hover {
   display: block;
 }
 
+.siteHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.siteHeaderSecondaryLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 6px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 13px;
+  color: var(--muted);
+  border: 1px solid transparent;
+  background: transparent;
+  white-space: nowrap;
+}
+
+.siteHeaderSecondaryLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  background: rgba(255, 255, 255, 0.35);
+  border-color: var(--border);
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
