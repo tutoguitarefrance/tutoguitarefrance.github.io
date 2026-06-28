@@ -230,6 +230,30 @@ a:hover {
   max-width: 68ch;
 }
 
+.supportFigure {
+  margin: var(--space-5) 0 0;
+}
+
+.supportFigureFrame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.supportFigure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.supportFigureCaption {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-weight: 550;
+  font-size: 13px;
+}
+
 .supportColumns {
   display: grid;
   grid-template-columns: 1fr;
