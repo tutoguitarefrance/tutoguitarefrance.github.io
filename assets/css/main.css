@@ -212,6 +212,87 @@ a:hover {
   padding: var(--space-5);
 }
 
+.supportHero {
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+}
+
+.supportSubtitle {
+  margin: -8px 0 var(--space-4);
+  font-weight: 750;
+  color: var(--muted);
+}
+
+.supportLead {
+  margin: 0;
+  max-width: 68ch;
+}
+
+.supportColumns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.supportH3 {
+  margin-top: 0;
+}
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+}
+
+.iconCard {
+  grid-column: span 12;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.iconDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(26, 122, 67, 0.35);
+  border: 1px solid rgba(26, 122, 67, 0.22);
+  margin-top: 4px;
+  flex: 0 0 auto;
+}
+
+.iconTitle {
+  font-weight: 800;
+}
+
+.iconBody {
+  color: var(--muted);
+  font-weight: 550;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.specItem {
+  grid-column: span 12;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.55);
+  font-weight: 650;
+}
+
 .depthSection {
   position: relative;
   width: 100vw;
@@ -325,6 +406,20 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-5);
+}
+
+@media (min-width: 860px) {
+  .supportColumns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .iconCard {
+    grid-column: span 6;
+  }
+
+  .specItem {
+    grid-column: span 6;
+  }
 }
 
 h1 {
