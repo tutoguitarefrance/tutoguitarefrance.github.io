@@ -88,8 +88,9 @@ a:hover {
 }
 
 .brandLogo {
-  height: 51px;
-  width: auto;
+  max-width: min(360px, 62vw);
+  max-height: 70px;
+  height: auto;
   display: block;
 }
 
