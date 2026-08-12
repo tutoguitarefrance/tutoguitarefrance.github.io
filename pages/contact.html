@@ -3,8 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tutoguitare — Contact</title>
+    <title>Demander un premier cours gratuit | TutoGuitare</title>
+    <meta
+      name="description"
+      content="Premier cours gratuit de guitare, basse, batterie, MAO, piano ou éveil musical au Pradet. Contact par SMS, email ou téléphone."
+    />
+    <link rel="canonical" href="https://tutoguitare.fr/pages/contact.html" />
+    <meta property="og:title" content="Demander un premier cours gratuit | TutoGuitare" />
+    <meta
+      property="og:description"
+      content="Contactez TutoGuitare au Pradet : premier cours gratuit de musique."
+    />
+    <meta property="og:url" content="https://tutoguitare.fr/pages/contact.html" />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" type="image/png" href="/assets/images/logo-tutoguitare-new.png" />
+    <link rel="apple-touch-icon" href="/assets/images/logo-tutoguitare-new.png" />
+    <style>
+      .contactCtas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: var(--space-4);
+      }
+      .contactCtas a {
+        min-width: 160px;
+        text-align: center;
+      }
+      .btnPrimary {
+        background: rgba(26, 122, 67, 0.14);
+        border-color: rgba(26, 122, 67, 0.4);
+      }
+    </style>
   </head>
   <body>
     <header class="siteHeader">
@@ -13,16 +43,15 @@
           <a class="brand" href="/">
             <img
               class="brandLogo"
-              src="/assets/images/Logo_tutoguitare_horizon_coul_transp.png"
-              alt="Tutoguitare"
+              src="/assets/images/banner-tutoguitare-new.png"
+              alt="TutoGuitare"
             />
           </a>
-          <a class="siteHeaderSecondaryLink" href="https://tutostudio.eu" target="_blank" rel="noopener noreferrer">← Tutostudio</a>
         </div>
         <nav class="nav" aria-label="Navigation principale">
           <a href="/">Accueil</a>
-          <a href="/pages/ressources/metronome.html">Ressources</a>
-          <a href="/pages/ma-selection.html">Ma sélection</a>
+          <a href="/#cours">Les cours</a>
+          <a href="/#pedagogie">Pédagogie</a>
           <a href="/pages/a-propos.html">À propos</a>
           <a href="/pages/contact.html">Contact</a>
         </nav>
@@ -31,25 +60,41 @@
 
     <main class="siteMain">
       <div class="container">
-        <h1>Contact</h1>
-        <p>mail :</p>
+        <h1>Demander un premier cours gratuit</h1>
+        <p>
+          La prise de contact se fait par SMS, email ou appel téléphonique. Il ne s’agit pas d’un système de réservation automatique.
+        </p>
+        <p style="margin-top: var(--space-3)">
+          Les cours ont lieu au Pradet. Les modalités pratiques sont communiquées lors du premier échange.
+        </p>
 
-    <!-- PEDAGO:START -->
-    <!-- Contact -->
-    <p>tutoguitare.france (a) gmail.com</p>
-    <!-- PEDAGO:END -->
-
+        <div class="contentBlock" style="margin-top: var(--space-5)">
+          <p style="margin: 0 0 var(--space-4)">
+            Choisissez le moyen qui vous convient le mieux pour demander votre premier cours d’essai gratuit.
+          </p>
+          <div class="contactCtas">
+            <a class="btnLink" href="sms:?body=Bonjour, je souhaite demander un premier cours d'essai gratuit avec TutoGuitare.">Envoyer un SMS</a>
+            <a class="btnLink" href="mailto:tutoguitare.france@gmail.com?subject=Demande%20de%20cours%20d'essai%20gratuit">Envoyer un email</a>
+            <a class="btnLink" href="tel:+33">Appeler</a>
+          </div>
+          <p style="margin-top: var(--space-4); color: var(--muted); font-size: 14px; margin-bottom: 0">
+            Le numéro de téléphone sera communiqué lors du premier échange.
+          </p>
+        </div>
       </div>
     </main>
 
     <footer class="siteFooter">
       <div class="container footerGrid">
         <div>
-          <p class="footerTitle">tutostudio.eu © 2026</p>
+          <p class="footerTitle">TutoGuitare — cours de musique au Pradet</p>
+          <p style="font-size: 14px; color: var(--muted); margin: 0">Pédagogie TutoStudio</p>
         </div>
         <div class="footerLinks">
+          <a href="https://tutostudio.eu" target="_blank" rel="noopener noreferrer">TutoStudio</a>
+          <a href="/pages/contact.html">Contact</a>
           <a href="/pages/mentions-legales.html">Mentions légales</a>
-          <a href="/pages/cgu.html">CGU</a>
+          <a href="/pages/cgu.html">Confidentialité</a>
         </div>
       </div>
     </footer>

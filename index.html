@@ -3,22 +3,97 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Apprendre la guitare autrement | Tutoguitare</title>
+    <title>Cours de musique au Pradet | TutoGuitare</title>
     <meta
       name="description"
-      content="Tutoguitare est une méthode moderne pour apprendre la guitare : rythme, écoute, expérimentation et repères concrets pour progresser sans surdose de théorie."
+      content="Cours de guitare, basse, initiation batterie, MAO, piano et éveil musical au Pradet. Parcours personnalisé et premier cours gratuit."
     />
     <link rel="canonical" href="https://tutoguitare.fr/" />
-    <meta property="og:title" content="Apprendre la guitare autrement | Tutoguitare" />
+    <meta property="og:title" content="Cours de musique au Pradet | TutoGuitare" />
     <meta
       property="og:description"
-      content="Une pédagogie qui privilégie le rythme, l'écoute, l'expérimentation et les déclics plutôt que l'accumulation de théorie."
+      content="Cours de guitare, basse, initiation batterie, MAO, piano et éveil musical au Pradet. Parcours personnalisé et premier cours gratuit."
     />
     <meta property="og:url" content="https://tutoguitare.fr/" />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="icon" type="image/png" href="/assets/images/Logo_tutoguitare_carre_coul_transp.png" />
-    <link rel="apple-touch-icon" href="/assets/images/Logo_tutoguitare_carre_coul_transp.png" />
+    <link rel="icon" type="image/png" href="/assets/images/logo-tutoguitare-new.png" />
+    <link rel="apple-touch-icon" href="/assets/images/logo-tutoguitare-new.png" />
+    <style>
+      .hero {
+        padding: var(--space-7) 0;
+      }
+      .heroSubtitle {
+        font-size: clamp(16px, 2.4vw, 22px);
+        font-weight: 700;
+        color: var(--accent);
+        margin: 0 0 var(--space-3);
+      }
+      .heroIntro {
+        max-width: 68ch;
+        font-size: 17px;
+      }
+      .heroActions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: var(--space-5);
+      }
+      .btnPrimary {
+        background: rgba(26, 122, 67, 0.14);
+        border-color: rgba(26, 122, 67, 0.4);
+      }
+      .courseGrid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-4);
+        margin-top: var(--space-4);
+      }
+      .courseGrid .card {
+        min-height: 160px;
+      }
+      .continuum {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-3);
+        flex-wrap: wrap;
+        padding: var(--space-4);
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.55);
+        margin-top: var(--space-4);
+      }
+      .continuumItem {
+        font-weight: 700;
+      }
+      .continuumArrow {
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .contactCtas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: var(--space-4);
+      }
+      .contactCtas a {
+        min-width: 140px;
+        text-align: center;
+      }
+      .toolGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--space-4);
+        margin-top: var(--space-4);
+      }
+      @media (max-width: 900px) {
+        .courseGrid,
+        .toolGrid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="siteHeader">
@@ -27,16 +102,15 @@
           <a class="brand" href="/">
             <img
               class="brandLogo"
-              src="/assets/images/Logo_tutoguitare_horizon_coul_transp.png"
-              alt="Tutoguitare"
+              src="/assets/images/banner-tutoguitare-new.png"
+              alt="TutoGuitare"
             />
           </a>
-          <a class="siteHeaderSecondaryLink" href="https://tutostudio.eu" target="_blank" rel="noopener noreferrer">← Tutostudio</a>
         </div>
         <nav class="nav" aria-label="Navigation principale">
           <a href="/">Accueil</a>
-          <a href="/pages/ressources/metronome.html">Ressources</a>
-          <a href="/pages/ma-selection.html">Ma sélection</a>
+          <a href="#cours">Les cours</a>
+          <a href="#pedagogie">Pédagogie</a>
           <a href="/pages/a-propos.html">À propos</a>
           <a href="/pages/contact.html">Contact</a>
         </nav>
@@ -44,200 +118,148 @@
     </header>
 
     <main class="siteMain">
-      <div class="container">
-        <h1>Apprendre la guitare autrement</h1>
-        <p>
-          Une pédagogie qui privilégie le rythme, l'écoute, l'expérimentation et les déclics plutôt que
-          l'accumulation de théorie.
-        </p>
-
-        <p style="margin-top: 10px">
-          <strong>Comprendre avant de mémoriser.</strong> Tutoguitare est une méthode pour apprendre la guitare en
-          construisant des repères simples (rythme, main droite, écoute) avant d'empiler des notions.
-        </p>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px">
-          <a class="btnLink" href="#methode">Découvrir la méthode</a>
-          <a class="btnLink" href="/pages/cours/debutant.html">Commencer gratuitement</a>
-          <a class="btnLink" href="/pages/cours/rythmiques.html">Rythmiques guitare</a>
-          <a class="btnLink" href="/pages/ressources/metronome.html">Métronome</a>
-          <a class="btnLink" href="#faq">FAQ</a>
+      <section class="hero">
+        <div class="container">
+          <h1>Cours de musique au Pradet</h1>
+          <p class="heroSubtitle">Guitare · Basse · Batterie · MAO · Piano · Éveil musical</p>
+          <p class="heroIntro">
+            Des cours personnalisés pour débutants ou pratiquants expérimentés, jeunes ou adultes. Le parcours est construit avec chaque élève selon ses capacités, ses envies et ses objectifs.
+          </p>
+          <div class="heroActions">
+            <a class="btnLink btnPrimary" href="/pages/contact.html">Demander un cours d’essai gratuit</a>
+            <a class="btnLink" href="#pedagogie">Découvrir la pédagogie</a>
+          </div>
         </div>
+      </section>
 
-        <!-- PEDAGO:START -->
-        <!-- Contenu pédagogique -->
-        <section id="methode" class="contentBlock" style="margin-top: 24px">
-          <h2>Pourquoi une autre approche ?</h2>
+      <section class="container" style="margin-top: var(--space-6)">
+        <h2>Un parcours adapté à chaque élève</h2>
+        <div class="contentBlock">
           <p>
-            Beaucoup de méthodes pour apprendre la guitare sont très théoriques, trop lentes, et
-            déconnectées de la réalité musicale.
+            Il n’existe pas un programme identique pour tous les élèves. Le parcours pédagogique est construit progressivement selon le niveau, les capacités, les goûts, le rythme d’apprentissage et les objectifs de chacun.
           </p>
-          <p>
-            Résultat : on mémorise des positions et des grilles sans vraiment comprendre ce qu'on fait,
-            et on a du mal à accompagner des chansons avec un rythme stable.
+          <div class="continuum" aria-label="Continuum pédagogique">
+            <span class="continuumItem">Pratique de loisir</span>
+            <span class="continuumArrow">← parcours personnalisé →</span>
+            <span class="continuumItem">Démarche professionnelle</span>
+          </div>
+          <p style="margin-bottom: 0; color: var(--muted); font-size: 14px; margin-top: var(--space-3)">
+            La pratique professionnelle est un horizon possible, jamais une finalité imposée.
           </p>
-          <p>
-            Chaque élève progresse différemment. Il n'y a pas un parcours standard, il y a des repères
-            à construire et des déclics à provoquer.
-          </p>
+        </div>
+      </section>
+
+      <section id="cours" class="container" style="margin-top: var(--space-6)">
+        <h2>Les cours proposés</h2>
+        <div class="courseGrid">
+          <div class="card">
+            <p class="cardTitle">Guitare</p>
+            <p>Pour débutants comme pour pratiquants expérimentés.</p>
+          </div>
+          <div class="card">
+            <p class="cardTitle">Basse</p>
+            <p>Travail instrumental, rythme, accompagnement et compréhension musicale.</p>
+          </div>
+          <div class="card">
+            <p class="cardTitle">Initiation batterie</p>
+            <p>Découverte du rythme, coordination et premières bases instrumentales.</p>
+          </div>
+          <div class="card">
+            <p class="cardTitle">MAO</p>
+            <p>Initiation aux outils de création et de production musicale assistée par ordinateur.</p>
+          </div>
+          <div class="card">
+            <p class="cardTitle">Initiation piano</p>
+            <p>Premiers repères sur le clavier et compréhension musicale.</p>
+          </div>
+          <div class="card">
+            <p class="cardTitle">Éveil musical</p>
+            <p>Découverte de la musique adaptée aux plus jeunes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" style="margin-top: var(--space-6)">
+        <h2>Faut-il connaître le solfège ?</h2>
+        <div class="contentBlock">
+          <p style="font-weight: 700; font-size: 18px; margin: 0 0 var(--space-3)">Non, le solfège n’est pas un prérequis.</p>
           <p style="margin-bottom: 0">
-            <strong>Chaque élève construit ses propres repères.</strong>
+            Les notions théoriques, la lecture ou l’harmonie sont introduites progressivement lorsqu’elles deviennent utiles à ce que l’élève souhaite jouer, comprendre ou développer.
           </p>
-        </section>
+        </div>
+      </section>
 
-        <section style="margin-top: 28px">
-          <h2>Notre approche pédagogique</h2>
-          <div class="cardGrid">
-            <div class="card">
-              <p class="cardTitle">Jouer rapidement</p>
-              <p>L'élève joue dès les premières séances.</p>
-            </div>
-            <div class="card">
-              <p class="cardTitle">Comprendre ce que l'on joue</p>
-              <p>Chaque notion possède un sens, lié à l'écoute et au contexte musical.</p>
-            </div>
-            <div class="card">
-              <p class="cardTitle">Ressentir le rythme</p>
-              <p>Le rythme est vécu avant d'être expliqué : pulsation, régularité, coordination.</p>
-            </div>
-            <div class="card">
-              <p class="cardTitle">Construire des repères</p>
-              <p>Les automatismes apparaissent progressivement, sans forcer ni accélérer trop tôt.</p>
-            </div>
+      <section id="pedagogie" class="container" style="margin-top: var(--space-6)">
+        <h2>Pédagogie TutoStudio</h2>
+        <div class="contentBlock">
+          <p>
+            Les cours s’appuient sur les principes pédagogiques développés par TutoStudio : comprendre avant de mémoriser, construire des repères, développer l’écoute, rendre le rythme perceptible et relier progressivement perception, compréhension et geste.
+          </p>
+          <a class="btnLink" href="https://tutostudio.eu" target="_blank" rel="noopener noreferrer">Découvrir TutoStudio</a>
+        </div>
+      </section>
+
+      <section class="container" style="margin-top: var(--space-6)">
+        <h2>Outils TutoStudio</h2>
+        <p style="max-width: 72ch">
+          Les outils TutoStudio (MagneDrum, Corporythme, Strumetric, Accordix) peuvent être utilisés en cours lorsqu’ils sont utiles à l’élève. Leurs détails restent sur TutoStudio.
+        </p>
+        <div class="toolGrid">
+          <div class="card">
+            <p class="cardTitle">MagneDrum</p>
+            <p>Comprendre le rythme par une représentation symbolique.</p>
+            <a class="btnLink" href="https://tutostudio.eu/magnedrum/" target="_blank" rel="noopener noreferrer">Découvrir</a>
           </div>
-        </section>
-
-        <section style="margin-top: 28px">
-          <h2>Les outils Tutostudio</h2>
-          <p>
-            Tutoguitare s'appuie sur
-            <a href="https://tutostudio.eu" target="_blank" rel="noopener noreferrer">Tutostudio</a> pour
-            rendre visibles les repères qui manquent souvent en cours : pulsation, subdivisions, gestes.
-          </p>
-          <p style="margin-top: 8px">
-            Idéal si tes élèves savent « quoi jouer », mais que ça n'est pas stable (rythme guitare, main droite,
-            coordination, régularité).
-          </p>
-          <div class="cardGrid">
-            <div class="card">
-              <p class="cardTitle">Corporythme</p>
-              <p>Visualiser la pulsation, les cycles et les subdivisions.</p>
-              <a class="btnLink" href="https://tutostudio.eu/corporythme/" target="_blank" rel="noopener noreferrer">Découvrir</a>
-            </div>
-            <div class="card">
-              <p class="cardTitle">Strumetric</p>
-              <p>Comprendre les mouvements rythmiques de la main droite.</p>
-              <a class="btnLink" href="https://tutostudio.eu/strummetric/" target="_blank" rel="noopener noreferrer">Découvrir</a>
-            </div>
-            <div class="card">
-              <p class="cardTitle">MagneDrum</p>
-              <p>Comprendre le rythme grâce à une représentation symbolique.</p>
-              <a class="btnLink" href="https://tutostudio.eu/magnedrum/" target="_blank" rel="noopener noreferrer">Découvrir</a>
-            </div>
-            <div class="card">
-              <p class="cardTitle">Accordix</p>
-              <p>Support pédagogique : relier positions, notes, nom et sonorité pour mieux comprendre les accords.</p>
-              <div style="display: flex; gap: 10px; flex-wrap: wrap">
-                <a class="btnLink" href="/pages/supports/quizaco.html">Découvrir</a>
-                <a class="btnLink" href="https://tutostudio.eu/accordix/" target="_blank" rel="noopener noreferrer">Commander</a>
-              </div>
-            </div>
+          <div class="card">
+            <p class="cardTitle">Corporythme</p>
+            <p>Visualiser la pulsation, les cycles et les subdivisions.</p>
+            <a class="btnLink" href="https://tutostudio.eu/corporythme/" target="_blank" rel="noopener noreferrer">Découvrir</a>
           </div>
-        </section>
-
-        <section style="margin-top: 28px">
-          <h2>Les ressources</h2>
-          <div class="cardGrid">
-            <div class="card">
-              <p class="cardTitle">Cours</p>
-              <p>Des leçons simples et progressives pour apprendre la guitare débutant.</p>
-              <a class="btnLink" href="/pages/cours/debutant.html">Voir</a>
-            </div>
-            <div class="card">
-              <p class="cardTitle">Exercices</p>
-              <p>Courtes séquences pour installer des automatismes (main droite, rythme, pulsation).</p>
-              <span class="btnLink btnLinkDisabled" aria-disabled="true">Bientôt</span>
-            </div>
-            <div class="card">
-              <p class="cardTitle">Playbacks</p>
-              <p>Jouer en contexte : accompagner des chansons sans perdre la pulsation.</p>
-              <span class="btnLink btnLinkDisabled" aria-disabled="true">Bientôt</span>
-            </div>
-            <div class="card">
-              <p class="cardTitle">Vidéos</p>
-              <p>Repères et explications courtes (sans surdose de théorie).</p>
-              <span class="btnLink btnLinkDisabled" aria-disabled="true">Bientôt</span>
-            </div>
+          <div class="card">
+            <p class="cardTitle">Strumetric</p>
+            <p>Comprendre les mouvements rythmiques de la main droite.</p>
+            <a class="btnLink" href="https://tutostudio.eu/strumetric/" target="_blank" rel="noopener noreferrer">Découvrir</a>
           </div>
-        </section>
+          <div class="card">
+            <p class="cardTitle">Accordix</p>
+            <p>Outil d’aide à la compréhension harmonique.</p>
+            <a class="btnLink" href="https://tutostudio.eu/" target="_blank" rel="noopener noreferrer">Découvrir</a>
+          </div>
+        </div>
+      </section>
 
-        <section style="margin-top: 28px" id="faq">
-          <h2>FAQ</h2>
-          <h3 style="margin: 0 0 8px; font-size: 16px; letter-spacing: -0.2px; font-weight: 800">
-            Comment apprendre la guitare ?
-          </h3>
+      <section id="contact" class="container" style="margin-top: var(--space-6); margin-bottom: var(--space-6)">
+        <h2>Premier cours gratuit</h2>
+        <div class="contentBlock">
           <p>
-            En construisant des repères simples : écouter, jouer en rythme, répéter des gestes
-            réguliers et comprendre ce que l'on fait avant d'accumuler des notions.
+            Ce premier rendez-vous permet de faire connaissance, de découvrir l’approche pédagogique et de définir ensemble les premiers objectifs.
           </p>
-
-          <h3 style="margin: 18px 0 8px; font-size: 16px; letter-spacing: -0.2px; font-weight: 800">
-            Comment travailler son rythme ?
-          </h3>
-          <p>
-            En stabilisant la pulsation et en organisant la main droite : mouvements simples,
-            subdivisions claires et répétition progressive.
+          <p style="margin-top: var(--space-3); color: var(--muted)">
+            Les cours ont lieu au Pradet. Les modalités pratiques sont communiquées lors du premier échange.
           </p>
-
-          <h3 style="margin: 18px 0 8px; font-size: 16px; letter-spacing: -0.2px; font-weight: 800">
-            Comment garder la pulsation ?
-          </h3>
-          <p>
-            En réduisant la difficulté : boucle courte, tempo confortable, repères corporels, puis
-            accélération seulement quand c'est stable.
+          <div class="contactCtas">
+            <a class="btnLink" href="sms:?body=Bonjour, je souhaite demander un premier cours d'essai gratuit avec TutoGuitare.">Envoyer un SMS</a>
+            <a class="btnLink" href="mailto:tutoguitare.france@gmail.com?subject=Demande%20de%20cours%20d'essai%20gratuit">Envoyer un email</a>
+            <a class="btnLink" href="tel:+33">Appeler</a>
+          </div>
+          <p style="margin-top: var(--space-3); color: var(--muted); font-size: 14px">
+            Le numéro de téléphone sera communiqué lors du premier échange.
           </p>
-
-          <h3 style="margin: 18px 0 8px; font-size: 16px; letter-spacing: -0.2px; font-weight: 800">
-            Comment progresser plus vite ?
-          </h3>
-          <p>
-            En travaillant une seule chose à la fois (rythme guitare, changement d'accord, main droite),
-            et en alternant compréhension et répétition.
-          </p>
-
-          <h3 style="margin: 18px 0 8px; font-size: 16px; letter-spacing: -0.2px; font-weight: 800">
-            Faut-il apprendre le solfège ?
-          </h3>
-          <p>
-            Non pour commencer. On peut apprendre la guitare en développant d'abord l'écoute, le rythme
-            et des repères concrets. Le solfège peut venir ensuite, si utile.
-          </p>
-
-          <h3 style="margin: 18px 0 8px; font-size: 16px; letter-spacing: -0.2px; font-weight: 800">
-            Comment accompagner des chansons ?
-          </h3>
-          <p>
-            En choisissant des rythmiques guitare simples, en gardant une pulsation stable, et en
-            améliorant progressivement la coordination main droite / accords.
-          </p>
-        </section>
-        <!-- PEDAGO:END -->
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer class="siteFooter">
       <div class="container footerGrid">
         <div>
-          <p class="footerTitle">Tutoguitare © 2026</p>
+          <p class="footerTitle">TutoGuitare — cours de musique au Pradet</p>
+          <p style="font-size: 14px; color: var(--muted); margin: 0">Pédagogie TutoStudio</p>
         </div>
         <div class="footerLinks">
-          <a href="https://tutostudio.eu" target="_blank" rel="noopener noreferrer">Tutostudio</a>
-          <a href="https://tutostudio.eu/corporythme/" target="_blank" rel="noopener noreferrer">Corporythme</a>
-          <a href="https://tutostudio.eu/strummetric/" target="_blank" rel="noopener noreferrer">Strumetric</a>
-          <a href="https://tutostudio.eu/magnedrum/" target="_blank" rel="noopener noreferrer">MagneDrum</a>
-          <a href="/pages/supports/quizaco.html">Accordix</a>
+          <a href="https://tutostudio.eu" target="_blank" rel="noopener noreferrer">TutoStudio</a>
+          <a href="/pages/contact.html">Contact</a>
           <a href="/pages/mentions-legales.html">Mentions légales</a>
-          <a href="/pages/cgu.html">CGU</a>
+          <a href="/pages/cgu.html">Confidentialité</a>
         </div>
       </div>
     </footer>
