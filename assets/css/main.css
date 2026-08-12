@@ -140,6 +140,7 @@ a:hover {
   text-decoration: none;
   font-weight: 650;
   font-size: 14px;
+  white-space: nowrap;
   transition: background-color 160ms ease, border-color 160ms ease;
 }
 
@@ -552,6 +553,7 @@ ul {
   border: 1px solid rgba(26, 122, 67, 0.25);
   text-decoration: none;
   font-weight: 750;
+  white-space: nowrap;
   transition: background-color 160ms ease, border-color 160ms ease;
 }
 
