@@ -3,6 +3,10 @@
   const nav = document.querySelector('.nav');
   if (!btn || !nav) return;
 
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    document.body.appendChild(nav);
+  }
+
   const setOpen = (open) => {
     nav.classList.toggle('is-open', open);
     btn.setAttribute('aria-expanded', String(open));
