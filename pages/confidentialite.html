@@ -17,6 +17,7 @@
     <meta property="og:url" content="https://tutoguitare.fr/pages/confidentialite.html" />
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="/assets/js/nav.js" defer></script>
     <link rel="icon" type="image/png" href="/assets/images/logo-tutoguitare-new.png" />
     <link rel="apple-touch-icon" href="/assets/images/logo-tutoguitare-new.png" />
   </head>
@@ -33,7 +34,10 @@
           </a>
           <a class="siteHeaderSecondaryLink" href="https://tutostudio.eu" target="_blank" rel="noopener noreferrer">← TutoStudio</a>
         </div>
-        <nav class="nav" aria-label="Navigation principale">
+                <button class="menuBtn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+          <span class="menuIcon" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" id="mainNav" aria-label="Navigation principale">
           <a href="/">Accueil</a>
           <a href="/#cours">Les cours</a>
           <a href="/#pedagogie">Pédagogie</a>
