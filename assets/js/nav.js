@@ -2,6 +2,8 @@
   const btn = document.querySelector('.menuBtn');
   const nav = document.querySelector('.nav');
   if (!btn || !nav) return;
+  if (btn.dataset.navInit) return;
+  btn.dataset.navInit = '1';
 
   if (window.matchMedia('(max-width: 768px)').matches) {
     document.body.appendChild(nav);
